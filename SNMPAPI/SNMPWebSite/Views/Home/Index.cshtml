@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+@{
+    ViewBag.Title = "Find Device Page";
+}
+
+<title>SNMP Device Information Overview</title>
+<h1 style="text-align:center">SNMP Device Information Overview</h1>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"></link>
+
+
+<body>
+
+    <br>
+    <div class="w3-container" style="position:relative">
+
+        <form action="/Home/showDevice">
+            <input type="text" class='w3-input w3-border' name='sendmsg' id='sendmsg' required placeholder="Enter IP or Host Name" />
+            <input type="submit" class="w3-btn w3-blue w3-border  w3-round-xlarge " style="position:absolute;top:2px;right:16px;" id="submitId" value="Search" />
+        </form>
+    </div>
+
+</body>
+
+</html>
+

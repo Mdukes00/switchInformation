@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+<head>
+</head>
+<div style="text-align:center">
+    <body style="text-align:center">
+
+
+        <h1 style="text-align:center">SNMP Device Information Overview</h1>
+        <a href="/" target="_self">&#128269; Return To Search &#128270;</a>
+
+        <h1 class="text-danger">Error.</h1>
+        <h2 class="text-danger">An error occurred while processing your request.</h2>
+        <h3 class="text-danger">Please Check the IP or the Host Name is valid you have entered is valid.</h3>
+        <h3 class="text-danger">The correct format for the IP address is as follows "x.x.x.x" example - 171.20.183.46</h3>
+        <h3 class="text-danger">The correct format for the host name is as follows - Device_Name.Location.Country.lego.com example Dkdc9400_dc1_1.bll.dk.lego.com</h3>
+        <h4 class="text-danger">If the IP and Host Name are valid please check with the device to see if the server where this website is hosted is on the access list</h4>
+
+        <hr>
+        <h2 class="text-">Error Description</h2>
+        <h3 class="text-info">@Model.Exception.InnerException.Message</h3>
+        <body>
+</div>
+</body>
+</html>

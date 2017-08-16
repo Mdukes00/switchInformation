@@ -1,0 +1,105 @@
+﻿﻿body {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: #4863A0;
+    color: white;
+}
+
+h4 {
+    text-align: center;
+}
+
+table#table1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    text-align:center;
+}
+ 
+#footer {
+    position: absolute;
+    bottom:  100%;
+    left:  100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;       
+}
+
+#imginthefooter {       
+    background: url(/Content/LegoBackground4.png);
+    width:100%;
+    height:100%;
+    z-index:300;
+    bottom:  100%;
+    top: -108px;
+    right: -250px;
+    position:   sticky;
+}
+
+
+
+@media print {
+    @media print {
+    }
+
+    h4#description, h4#lblDescription {
+        display: none;
+    }
+
+    header nav, footer {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    h1 {
+        display: none;
+    }
+    #returnhome{
+        display: none;
+    }
+    
+    a[href]:after {
+        content: none;
+    }
+
+
+    h4 {
+        font: 7pt Georgia, "Times New Roman", Times, serif;
+        line-height: 1;
+    }
+
+
+    body {
+        padding-top: 0;
+        padding-bottom: 0;
+        font: 7pt Georgia, "Times New Roman", Times, serif;
+        line-height: 1;
+    }
+
+    title {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}

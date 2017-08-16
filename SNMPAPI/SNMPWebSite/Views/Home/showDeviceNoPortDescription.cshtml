@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+@model SNMPWebSite.Models.DeviceObject
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" name="viewport" content="width=device-width, initial-scale=1"></meta>
+    @Styles.Render("/Content/Table.css")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body style="background-color: white">
+
+
+    <h1 style="text-align:center">SNMP Device Information Overview</h1>
+    <h4 id="lblHostName" style="background-color: white">- Host name & IP Address -</h4>
+    <h4 style="background-color: white"><span style="color:blue">@Model.hostName - @Model.IpAddress</span></h4>
+    <h4 style="background-color: white" id="lblDescription">- Device description -</h4>
+    <h4 style="background-color: white" id="description"><span style="color:blue">@Model.description</span></h4>
+    <h4 style="background-color: white" id="lblUptime">- Time since restart -</h4>
+    <h4 style="background-color: white"><span style="color:blue">@Model.systemUpTimeDays day(s) - @Model.systemUpTimeHours hour(s) - @Model.systemUpTimeMinutes minute(s)</span></h4>
+
+    <h4 style="background-color: white"><a id="returnhome" href="/" target="_self">&#128269; Return To Search &#128270;</a></h4>
+
+
+
+
+    <div>
+        <table id="table1" style="background-color: white">
+
+            <tr>
+                <th>Interface</th>
+                <th>Vlan ID</th>
+                <th>Vlan Name</th>
+                <th>Link Status</th>
+                <th>Interface Status</th>
+                <th>Down time</th>
+                <th>Connected Device</th>
+            </tr>
+            <tbody>
+
+
+                @foreach (var item in Model.interfaces.Values.Where(m => m.name.Contains("Ethernet")))
+                {
+                    <tr>
+                        <td>@item.name </td>
+                        <td>@item.vlanID</td>
+                        <td>@item.vlanName</td>
+                        <td>@item.linkStatus</td>
+                        <td>@item.errorState</td>
+                        <td>@item.downTime</td>
+                        <td><a id="TrunkedDevice" href="/Home/showDevice?sendmsg=@item.ConnectedDeviceName" target="_blank">@item.ConnectedDeviceName </a></td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+
+        <script type="">
+            $("tr:contains(Use)").css("color", "Green");
+            $("tr:contains(Not)").css("color", "RoyalBlue ");
+            $("tr:contains(Error)").css("color", "FireBrick ");
+            $("tr:contains(Shutdown)").css("color", "FireBrick ");
+            $("tr:contains(Testing)").css("color", "FireBrick ");
+        </script>
+    </div>
+</body>
+
+</html>
+

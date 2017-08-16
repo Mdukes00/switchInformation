@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Web
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMPBasic", "..\SNMPBasic\SNMPBasic.csproj", "{90B7E9FF-B456-4293-9250-726824988D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMPWebSite", "SNMPWebSite\SNMPWebSite.csproj", "{3EC7C641-CAFC-414D-9F85-0F89B7A3854B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNMPBasicTests", "SNMPBasicTests\SNMPBasicTests.csproj", "{62FFC001-03DA-4BD1-B139-6276D57C0705}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90B7E9FF-B456-4293-9250-726824988D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B7E9FF-B456-4293-9250-726824988D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B7E9FF-B456-4293-9250-726824988D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B7E9FF-B456-4293-9250-726824988D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EC7C641-CAFC-414D-9F85-0F89B7A3854B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC7C641-CAFC-414D-9F85-0F89B7A3854B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC7C641-CAFC-414D-9F85-0F89B7A3854B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC7C641-CAFC-414D-9F85-0F89B7A3854B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FFC001-03DA-4BD1-B139-6276D57C0705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FFC001-03DA-4BD1-B139-6276D57C0705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FFC001-03DA-4BD1-B139-6276D57C0705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FFC001-03DA-4BD1-B139-6276D57C0705}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
